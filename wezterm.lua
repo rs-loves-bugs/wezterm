@@ -8,7 +8,7 @@ return {
 		{ family = "JetBrains Mono",         weight = "Regular", harfbuzz_features = { "calt=0", "clig=0", "liga=0" } },
 		{ family = "Symbols Nerd Font Mono", scale = 0.75 },
 	}),
-	font_size = 11.0,
+	font_size = 10.0,
 	use_cap_height_to_scale_fallback_fonts = true,
 	hide_tab_bar_if_only_one_tab = true,
 	default_cursor_style = "BlinkingBlock",
