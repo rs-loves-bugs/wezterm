@@ -4,12 +4,11 @@ return {
 		font = wezterm.font({ family = "Segoe UI Variable Static Display", weight = "Regular" }),
 		font_size = 9.0,
 	},
-	-- font = wezterm.font("SauceCodePro Nerd Font", { weight = "Medium" }),
 	font = wezterm.font_with_fallback({
-		{ family = "Source Code Pro",        weight = "Medium" },
-		{ family = "Symbols Nerd Font Mono", scale = 0.90 },
+		{ family = "JetBrains Mono",         weight = "Regular", harfbuzz_features = { "calt=0", "clig=0", "liga=0" } },
+		{ family = "Symbols Nerd Font Mono", scale = 0.75 },
 	}),
-	font_size = 10.0,
+	font_size = 11.0,
 	use_cap_height_to_scale_fallback_fonts = true,
 	hide_tab_bar_if_only_one_tab = true,
 	default_cursor_style = "BlinkingBlock",
@@ -21,8 +20,8 @@ return {
 	window_padding = {
 		left = 0,
 		right = 0,
-		top = 1,
-		bottom = 1,
+		top = 0,
+		bottom = 0,
 	},
 	colors = {
 		-- The default text color
