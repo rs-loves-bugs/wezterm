@@ -1,11 +1,27 @@
 local wezterm = require("wezterm")
+wezterm.on("format-tab-title", function(tab)
+	local has_unseen_output = false
+	for _, pane in ipairs(tab.panes) do
+		if pane.has_unseen_output then
+			has_unseen_output = true
+			break
+		end
+	end
+	if has_unseen_output then
+		return {
+			{ Foreground = { Color = "Green" } },
+			{ Text = " " .. tab.active_pane.title .. " " },
+		}
+	end
+	return tab.active_pane.title
+end)
 return {
 	window_frame = {
 		font = wezterm.font({ family = "Segoe UI Variable Static Display", weight = "Regular" }),
 		font_size = 9.0,
 	},
 	font = wezterm.font_with_fallback({
-		{ family = "JetBrains Mono",         weight = "Regular", harfbuzz_features = { "calt=0", "clig=0", "liga=0" } },
+		{ family = "JetBrains Mono", weight = "Regular", harfbuzz_features = { "calt=0", "clig=0", "liga=0" } },
 		{ family = "Symbols Nerd Font Mono", scale = 0.75 },
 	}),
 	font_size = 10.0,
