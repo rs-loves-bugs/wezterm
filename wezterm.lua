@@ -23,6 +23,13 @@ return {
 		top = 0,
 		bottom = 0,
 	},
+	mouse_bindings = {
+		{
+			event = { Down = { streak = 1, button = "Right" } },
+			mods = "NONE",
+			action = wezterm.action.PasteFrom("PrimarySelection"),
+		},
+	},
 	colors = {
 		-- The default text color
 		foreground = "#fcfcfc",
