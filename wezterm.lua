@@ -27,6 +27,7 @@ return {
 	font_size = 10.0,
 	use_cap_height_to_scale_fallback_fonts = true,
 	hide_tab_bar_if_only_one_tab = true,
+	window_close_confirmation = 'NeverPrompt',
 	default_cursor_style = "BlinkingBlock",
 	cursor_blink_rate = 500,
 	animation_fps = 60,
